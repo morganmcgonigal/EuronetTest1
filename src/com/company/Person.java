@@ -50,7 +50,12 @@ public class Person {
         return  hobbies.get(i);
     }
 
-    public void setHobbies(ArrayList<String> hobbies) {
-        this.hobbies = hobbies;
+    public void setHobbies(String hobbies) {
+        this.hobbies.add(hobbies);
+    }
+
+    @Override
+    public String toString(){
+        return " " + this.getHobbies();
     }
 }

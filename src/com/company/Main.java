@@ -1,6 +1,8 @@
 package com.company;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -15,7 +17,7 @@ public class Main {
 
         while (end < str.length()) {
             Person person = new Person();
-            String hobbies = "";
+            String hobbies;
 
             person.setFirstName(str.substring(start, end).trim());
 
@@ -83,13 +85,13 @@ public class Main {
             start += 1;
             end += 10;
 
-//            for (int i = 1; i <= hobbiesLength; i++)
-//            {
-//                person.setHobbies(str.substring(start, end));
-//
-//                start += 10;
-//                end += 10;
-//            }
+            for (int i = 1; i <= hobbiesLength; i++)
+            {
+                person.setHobbies(str.substring(start, end).trim());
+
+                start += 10;
+                end += 10;
+            }
 
             System.out.print("Hobbies:  ");
             if (person.getHobbies().size() > 0) {
